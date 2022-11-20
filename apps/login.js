@@ -8,3 +8,8 @@ let btnLogin =  document.querySelector('.btn-login')
 inUser.addEventListener('keypress',()=>{
     labelUser.classList.add('on')
 })
+
+inPass.addEventListener('keypress',()=>{
+    labelPass.classList.add('on')
+    showPass.classList.add("active")
+})
