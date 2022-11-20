@@ -27,5 +27,5 @@ showPass.addEventListener('click',()=>{
 
 btnLogin.onclick = ()=>{
 
-    location.assign('Web_Ass4/landing-page.html')
+    location.assign('./landing-page.html')
 }
