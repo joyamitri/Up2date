@@ -12,3 +12,6 @@ headerOverlay.addEventListener('click',()=>{
     headerImgProfile.classList.toggle('active')
     headerOverlay.classList.toggle('active')
 })
+
+//add posts
+let posts = document.querySelector('.posts')
