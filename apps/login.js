@@ -8,6 +8,7 @@ let btnLogin =  document.querySelector('.btn-login')
 const pages = {}
 const base_url = "http://localhost/Up2date/";
 
+<<<<<<< Updated upstream
 
 pages.Console = (title, values, one_value = true) => {
     console.log('---' + title + '---')
@@ -29,6 +30,15 @@ pages.getAPI = async(api_url) => {
     }catch(error){
         pages.Console("Error from linking (GET)", error)
     }
+=======
+pages.getAPI = async(api_url) => { 
+    
+    try{
+        return await axios(api_url) 
+    }catch(error){
+        pages.Console("Error from linking (GET)", error)
+    }
+>>>>>>> Stashed changes
 }
 
 pages.loadFor = (page) => { 
@@ -58,6 +68,7 @@ pages.load_landing = async() =>{
     const user_name = document.getElementById("username");
     btnLogin.addEventListener("click", async function(){
         const username = user_name.value;
+<<<<<<< Updated upstream
         if(username == ""){
             pages.Console("No Access")
         }
@@ -70,6 +81,12 @@ pages.load_landing = async() =>{
             // // }else{
             // //     location.assign('./landing-page.html')
             // // }
+=======
+        const user_url = base_url + "backend/get_user.php?username=" + username
+        const resp = await pages.getAPI(user_url)
+        if(resp.data.length == 0){
+            
+>>>>>>> Stashed changes
         }
     })
 }
